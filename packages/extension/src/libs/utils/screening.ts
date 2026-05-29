@@ -1,5 +1,5 @@
 const isGeoRestricted = async (): Promise<boolean> => {
-  return fetch('https://partners.mewapi.io/o/ipcomply')
+  return fetch('https://partners.mewapi.io/o/ipcomply/enkrypt')
     .then(async res => {
       if (res.ok) {
         const json = await res.json();
