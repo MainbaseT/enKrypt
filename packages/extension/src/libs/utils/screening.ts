@@ -5,9 +5,9 @@ const isGeoRestricted = async (): Promise<boolean> => {
         const json = await res.json();
         return json.isRestricted;
       }
-      return false;
+      return true;
     })
-    .catch(() => false);
+    .catch(() => true);
 };
 
 const walletCache: Record<string, boolean> = {};
